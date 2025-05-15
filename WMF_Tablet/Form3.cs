@@ -389,9 +389,8 @@ namespace WMF_Tablet
             '{mSavePurchaseLog.InsertUserNo}',
             '{mSavePurchaseLog.UploadDateTime}',
             '{mSavePurchaseLog.UploadUserNo}',
-            '{mSavePurchaseLog.ExportDateTime},
-            '{mSavePurchaseLog.Pallet}";
-            //增加Pallet欄位
+            '{mSavePurchaseLog.ExportDateTime}')";
+            
             SqlCommand cmd = new SqlCommand(mstrSavePurchaseLog, frmLogin.cnn);
             frmLogin.cnn.Open();
             cmd.ExecuteNonQuery();
