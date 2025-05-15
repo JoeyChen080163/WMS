@@ -193,6 +193,7 @@ namespace WMF_Tablet
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            Application.Exit();
             //CommpanyIndex = 0;//1=合澤(03)、2=合永(10),3=小澤(06)
             if (CommpanyIndex == 1)
             {

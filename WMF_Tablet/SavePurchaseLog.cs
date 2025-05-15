@@ -26,5 +26,6 @@ namespace WMF_Tablet
         public String UploadDateTime { get; set; }
         public String UploadUserNo { get; set; }
         public String ExportDateTime { get; set; }
+        public int Pallet { get; set; } //是否板進
     }
 }

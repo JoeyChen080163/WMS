@@ -389,7 +389,8 @@ namespace WMF_Tablet
             '{mSavePurchaseLog.InsertUserNo}',
             '{mSavePurchaseLog.UploadDateTime}',
             '{mSavePurchaseLog.UploadUserNo}',
-            '{mSavePurchaseLog.ExportDateTime}')";
+            '{mSavePurchaseLog.ExportDateTime},
+            '{mSavePurchaseLog.Pallet}";
             
             SqlCommand cmd = new SqlCommand(mstrSavePurchaseLog, frmLogin.cnn);
             frmLogin.cnn.Open();
@@ -434,8 +435,7 @@ namespace WMF_Tablet
                '{mBoxLog.SaleNo}',
                '{mBoxLog.inStock}',
                '{mBoxLog.InsertDateTime}',
-               '{mBoxLog.WorkPDAId}',
-               '{mBoxLog.UpdateDateTime}')";
+               '{mBoxLog.WorkPDAId}')";
             
             SqlCommand cmd = new SqlCommand(mstrSaveBoxLog,frmLogin.cnn);
             frmLogin.cnn.Open();
@@ -609,7 +609,8 @@ namespace WMF_Tablet
                 miQ += mlstROT[0].Quantity;
                 mSavePurchaseLog.Quantity = miQ.ToString();
                 mSavePurchaseLog.TotalBox = "";
-                mSavePurchaseLog.ItemRemark = "1";
+                //mSavePurchaseLog.ItemRemark = "1";
+                mSavePurchaseLog.Pallet = 1;
                 mSavePurchaseLog.WorkPDAId = frmLogin.mPdaInfo.PDAId;
                 mSavePurchaseLog.InsertDateTime = DateTime.Now.ToString();
                 mSavePurchaseLog.InsertUserNo = frmLogin.mUserInfo.UserNo;
@@ -645,7 +646,8 @@ namespace WMF_Tablet
                             miQ += mlstROT[j].Quantity;
                             mSavePurchaseLog.Quantity = miQ.ToString();
                             mSavePurchaseLog.TotalBox = "";
-                            mSavePurchaseLog.ItemRemark = "0";
+                            //mSavePurchaseLog.ItemRemark = "0";
+                            mSavePurchaseLog.Pallet = 0;
                             mSavePurchaseLog.WorkPDAId = frmLogin.mPdaInfo.PDAId;
                             mSavePurchaseLog.InsertDateTime = DateTime.Now.ToString();
                             mSavePurchaseLog.InsertUserNo = frmLogin.mUserInfo.UserNo;
